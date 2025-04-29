@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosedur Laboratorium Klinik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-flask"></i>
+                <span>LabPro</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#procedures">Prosedur</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Prosedur Laboratorium Klinik</h1>
+                <p>Panduan lengkap standar operasional prosedur laboratorium</p>
+            </div>
+        </section>
+
+        <section id="procedures">
+            <div class="container">
+                <h2>Daftar Prosedur</h2>
+                
+                <div class="search-filter">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Cari prosedur...">
+                    </div>
+                    <div class="filter-dropdown">
+                        <select id="categoryFilter">
+                            <option value="">Semua Kategori</option>
+                            <!-- Kategori akan diisi oleh JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="procedure-grid" id="procedureContainer">
+                    <!-- Prosedur akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Tentang Kami</h2>
+                <div class="about-content">
+                    <div>
+                        <h3>Laboratorium Profesional</h3>
+                        <p>Kami menyediakan panduan prosedur laboratorium yang akurat dan terbaru sesuai standar internasional.</p>
+                    </div>
+                    <div>
+                        <img src="assets/lab-image.jpg" alt="Laboratorium">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Laboratorium Klinik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="procedures-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
