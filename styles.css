@@ -142,7 +142,7 @@ nav a.active:after {
     background-size: 1rem;
 }
 
-/* Procedure Cards - Updated */
+/* Procedure Cards */
 .procedure-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -231,6 +231,96 @@ footer {
     text-align: center;
 }
 
+/* Popup Credit Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--gray);
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close-popup:hover {
+    color: var(--primary);
+}
+
+.credit-content {
+    margin-top: 1rem;
+}
+
+.credit-content h3 {
+    color: var(--primary);
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.credit-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.credit-content p {
+    margin-bottom: 1rem;
+}
+
+.footer-credit {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-credit i {
+    margin-right: 0.3rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-container {
@@ -240,5 +330,16 @@ footer {
     
     .about-content {
         grid-template-columns: 1fr;
+    }
+    
+    .popup-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .close-popup {
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 1.8rem;
     }
 }
