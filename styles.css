@@ -194,14 +194,14 @@ nav a.active:after {
     color: var(--gray);
 }
 
-/* About Section - Elegant Full Width */
+/* About Section - With Background Image */
 #about {
     text-align: center;
     padding: 4rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     margin: 3rem 0;
     width: 100%;
+    overflow: hidden;
 }
 
 #about::before {
@@ -210,15 +210,34 @@ nav a.active:after {
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    background-image: url('assets/lab-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1; 
+    z-index: -1;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 10px;
     background: linear-gradient(90deg, var(--primary), var(--accent));
+    z-index: 1;
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.5rem;
     position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-content h3 {
@@ -241,36 +260,6 @@ nav a.active:after {
     width: 50px;
     height: 2px;
     background: var(--accent);
-}
-
-.about-content p {
-    margin-bottom: 0.8rem;
-    color: var(--dark);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    font-weight: 400;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--secondary);
-    font-weight: 700;
-    letter-spacing: 1px;
-    position: relative;
-    padding-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
-}
-
-#about h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: var(--primary);
 }
 
 /* Footer */
